@@ -4,6 +4,7 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 import { Grid, Card, CardContent, CardHeader, Paper } from '@material-ui/core';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import { WiDaySunny, WiMoonWaxingCrescent4, WiRain, WiSnowflakeCold, WiSleet, WiStrongWind, WiFog, WiCloudy, WiDayCloudy, WiNightAltCloudy, WiWindDeg } from "react-icons/wi";
 import dayton_img from '../../../assets/dayton.jpeg'
 
 const styles = theme => ({
@@ -29,34 +30,32 @@ const BorderLinearProgress = withStyles({
 
 class DarkSkyCard extends Component {
 
-/*
     renderWeatherIcon(icon) {
         switch(icon) {
             case 'clear-day':
-                return <MDBIcon icon="sun" size="5x" className="amber-text" />;
+                return <WiDaySunny />;
             case 'clear-night':
-                return <MDBIcon icon="moon" size="5x" className="blue-text" />;
+                return <WiMoonWaxingCrescent4 />;
             case 'rain':
-                return <MDBIcon icon="cloud-rain" size="5x" className="indigo-text" />;
+                return <WiRain />;
             case 'snow':
-                return <MDBIcon icon="snowflake" size="5x" className="blue-grey-text" />;
+                return <WiSnowflakeCold />;
             case 'sleet':
-                return <MDBIcon icon="snowflake" size="5x" className="light-blue-text" />;
+                return <WiSleet />;
             case 'wind':
-                return <MDBIcon icon="wind" size="5x" className="blue-grey-text" />;
+                return <WiStrongWind />;
             case 'fog':
-                return <MDBIcon icon="cloud" size="5x" className="grey-text" />;
+                return <WiFog />;
             case 'cloudy':
-                return <MDBIcon icon="cloud" size="5x" className="blue-grey-text" />;
+                return <WiCloudy />;
             case 'partly-cloudy-day':
-                return <MDBIcon icon="cloud-sun" size="5x" className="orange-text" />;
+                return <WiDayCloudy />;
             case 'partly-cloudy-night':
-                return <MDBIcon icon="cloud-moon" size="5x" className="deep-purple-text" />;
+                return <WiNightAltCloudy />;
             default:
-                return <MDBIcon icon="poo-storm" size="5x" className="brown-text" />;
+                return <WiWindDeg />;
         }
     }
-*/
     render() {
         const { classes } = this.props;
 
@@ -101,7 +100,7 @@ class DarkSkyCard extends Component {
                         </Grid>
                         <Grid item>
                             <Typography variant="body2" display="inline" align="right" component="p">
-//                                    {/* this.renderWeatherIcon(this.props.data.icon) */}
+                                    { this.renderWeatherIcon(this.props.data.icon) }
                             </Typography>
                             <Typography variant="body2" color="textSecondary" component="p">
                                 {this.props.data.summary}
