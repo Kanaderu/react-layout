@@ -101,7 +101,7 @@ class DarkSkyCard extends Component {
                         </Grid>
                         <Grid item>
                             <Typography variant="body2" display="inline" align="right" component="p">
-//                                    { this.renderWeatherIcon(this.props.data.icon) }
+//                                    {/* this.renderWeatherIcon(this.props.data.icon) */}
                             </Typography>
                             <Typography variant="body2" color="textSecondary" component="p">
                                 {this.props.data.summary}

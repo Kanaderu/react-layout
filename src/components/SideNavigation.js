@@ -41,7 +41,7 @@ class SideNavigation extends Component {
         return (
             <div className={classes.root}>
                 <List component="nav" aria-label="main mailbox folders">
-                    <NavLink exact={true} to="/" style={{ textDecoration: 'none' }}>
+                    <NavLink exact={true} to="/dashboard" style={{ textDecoration: 'none' }}>
                         <ListItem
                             button
                             selected={this.state.selectedIndex === 0}
