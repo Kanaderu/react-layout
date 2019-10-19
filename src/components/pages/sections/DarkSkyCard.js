@@ -4,7 +4,6 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 import { Grid, Card, CardContent, CardHeader, Paper } from '@material-ui/core';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import { MDBIcon } from 'mdbreact';
 import dayton_img from '../../../assets/dayton.jpeg'
 
 const styles = theme => ({
@@ -30,6 +29,7 @@ const BorderLinearProgress = withStyles({
 
 class DarkSkyCard extends Component {
 
+/*
     renderWeatherIcon(icon) {
         switch(icon) {
             case 'clear-day':
@@ -56,7 +56,7 @@ class DarkSkyCard extends Component {
                 return <MDBIcon icon="poo-storm" size="5x" className="brown-text" />;
         }
     }
-
+*/
     render() {
         const { classes } = this.props;
 
@@ -101,7 +101,7 @@ class DarkSkyCard extends Component {
                         </Grid>
                         <Grid item>
                             <Typography variant="body2" display="inline" align="right" component="p">
-                                    { this.renderWeatherIcon(this.props.data.icon) }
+//                                    { this.renderWeatherIcon(this.props.data.icon) }
                             </Typography>
                             <Typography variant="body2" color="textSecondary" component="p">
                                 {this.props.data.summary}
@@ -115,17 +115,17 @@ class DarkSkyCard extends Component {
                     >
                         <Grid item>
                             <Typography variant="body2" color="textSecondary" component="p">
-                                <MDBIcon icon="tint" size="lg" className="cyan-text pr-2"/>{ this.props.data.precipProbability * 100.0}% Precipitation
+{/*                                <MDBIcon icon="tint" size="lg" className="cyan-text pr-2"/>{ this.props.data.precipProbability * 100.0}% Precipitation*/}
                             </Typography>
                         </Grid>
                         <Grid item>
                             <Typography variant="body2" color="textSecondary" component="p">
-                                <MDBIcon icon="leaf" size="lg" className="grey-text pr-2"/>{ this.props.data.windSpeed } mi/h Winds
+{/*                                <MDBIcon icon="leaf" size="lg" className="grey-text pr-2"/>{ this.props.data.windSpeed } mi/h Winds*/}
                             </Typography>
                         </Grid>
                         <Grid item>
                             <Typography variant="body2" color="textSecondary" component="p">
-                                <MDBIcon icon="water" size="lg" className="blue-text pr-2" />{ this.props.data.humidity * 100.0}% Humidity
+{/*                                <MDBIcon icon="water" size="lg" className="blue-text pr-2" />{ this.props.data.humidity * 100.0}% Humidity*/}
                             </Typography>
                         </Grid>
                         <Grid item xs={12}>

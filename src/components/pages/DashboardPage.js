@@ -3,7 +3,6 @@ import { withStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
-import { MDBRow } from 'mdbreact';
 
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
