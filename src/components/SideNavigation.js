@@ -41,7 +41,7 @@ class SideNavigation extends Component {
         return (
             <div className={classes.root}>
                 <List component="nav" aria-label="main mailbox folders">
-                    <NavLink exact={true} to="/">
+                    <NavLink exact={true} to="/" style={{ textDecoration: 'none' }}>
                         <ListItem
                             button
                             selected={this.state.selectedIndex === 0}
@@ -53,7 +53,7 @@ class SideNavigation extends Component {
                             <ListItemText primary="Home" />
                         </ListItem>
                     </NavLink>
-                    <NavLink exact={true} to="/test2">
+                    <NavLink exact={true} to="/test2" style={{ textDecoration: 'none' }}>
                         <ListItem
                             button
                             selected={this.state.selectedIndex === 1}
@@ -68,7 +68,7 @@ class SideNavigation extends Component {
                 </List>
                 <Divider />
                 <List component="nav" aria-label="secondary mailbox folder">
-                    <NavLink exact={true} to="/">
+                    <NavLink exact={true} to="/" style={{ textDecoration: 'none' }}>
                         <ListItem
                             button
                             selected={this.state.selectedIndex === 2}
@@ -80,7 +80,7 @@ class SideNavigation extends Component {
                             <ListItemText primary="GitHub Source" />
                         </ListItem>
                     </NavLink>
-                    <NavLink exact={true} to="/test2">
+                    <NavLink exact={true} to="/test2" style={{ textDecoration: 'none' }}>
                         <ListItem
                             button
                             selected={this.state.selectedIndex === 3}
