@@ -66,18 +66,18 @@ class SideNavigation extends Component {
                 </List>
                 <Divider />
                 <List component="nav" aria-label="secondary mailbox folder">
-                    <NavLink exact={true} to="/" style={{ textDecoration: 'none' }}>
+                    <a style={{ textDecoration: 'none' }} rel="noopener noreferrer" target="_blank" href="https://github.com/Kanaderu/iotsite">
                         <ListItem
                             button
                             selected={this.state.selectedIndex === 2}
-                            onClick={event => handleListItemClick(event, 2)}
+                            onClick={event => handleListItemClick(event, this.state.selectedIndex)}
                         >
                             <ListItemIcon>
                                 <GitHubIcon />
                             </ListItemIcon>
                             <ListItemText primary="GitHub Source" />
                         </ListItem>
-                    </NavLink>
+                    </a>
                     <NavLink exact={true} to="/test2" style={{ textDecoration: 'none' }}>
                         <ListItem
                             button
