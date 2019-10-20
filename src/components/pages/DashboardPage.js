@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import { withStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme, withStyles } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 
-//import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 
 import DarkSkyCard from './sections/DarkSkyCard';
-//import MapSection from './sections/MapSection';
-//import MapVectorSection from './sections/MapVectorSection';
+import MapSection from './sections/MapSection';
+import MapVectorSection from './sections/MapVectorSection';
 import GenericChart from './sections/GenericChart';
 
 const styles = theme => ({
@@ -353,20 +351,16 @@ class DashboardPage extends Component {
                     </Grid>
                     <Grid item xs={12} sm={6}>
                         <Paper className={classes.paper}>
-                            {/*
                             <MapSection
                                 title="ArcGIS Satellite Elevation Map"
                             />
-                            */}
                         </Paper>
                     </Grid>
                     <Grid item xs={12} sm={6}>
                         <Paper className={classes.paper}>
-                            {/*
-                            <MapSection
+                            <MapVectorSection
                                 title="ArcGIS Map Vector"
                             />
-                            */}
                         </Paper>
                     </Grid>
                 </Grid>

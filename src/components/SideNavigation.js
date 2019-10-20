@@ -31,10 +31,8 @@ class SideNavigation extends Component {
 
     render() {
         const { classes } = this.props;
-        //const [selectedIndex, setSelectedIndex] = React.useState(1);
 
         const handleListItemClick = (event, index) => {
-            //setSelectedIndex(index);
             this.setState({selectedIndex: index});
         };
 
