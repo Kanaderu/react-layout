@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { lighten, withStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
-import { Grid, Card, CardContent, CardHeader, Paper } from '@material-ui/core';
+import { Grid, Card, CardContent, CardHeader } from '@material-ui/core';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { IconContext } from "react-icons";
