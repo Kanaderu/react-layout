@@ -9,32 +9,48 @@ import Typography from "@material-ui/core/Typography";
 import { Root, Header, Nav, Content, Footer, presets } from 'mui-layout';
 import Routes from './components/Routes';
 import SideNavigation from './components/SideNavigation';
+import blue from '@material-ui/core/colors/blue';
+import red from '@material-ui/core/colors/red';
 
-// add presets.create{}() to config props in Root to change the behavior, looking and layout
-// <Root config={presets.createCozyLayout()}> ...
+const theme = createMuiTheme({
+    palette: {
+        primary: {
+            main: blue[700],
+        },
+        secondary: {
+            main: red[500],
+        },
+        error: red[0],
+        contrastThreshold: 3,
+        tonalOffset: 0.2,
+    },
+});
+
 class App extends Component {
-  render() {
-  return (
-    <ThemeProvider theme={createMuiTheme()}>
-      <Root config={presets.createContentBasedLayout()}>
-        <Header renderMenuIcon={open => (open ? <ChevronLeft /> : <MenuIcon />)}>
-          <Typography variant="h6">UD Sensors</Typography>
-        </Header>
-        <Nav renderIcon={collapsed => collapsed ? <ChevronRight /> : <ChevronLeft />}>
-          <SideNavigation />
-        </Nav>
-        <Content>
-          <main>
-            <Routes />
-          </main>
-        </Content>
-        <Footer>
-        footer
-        </Footer>
-      </Root>
-    </ThemeProvider>
-  );
-  }
+    render() {
+        return (
+            <ThemeProvider theme={theme}>
+                <Root config={presets.createContentBasedLayout()}>
+                    <Header color="primary" renderMenuIcon={open => (open ? <ChevronLeft /> : <MenuIcon />)}>
+                        <Typography variant="h6">UD Sensors</Typography>
+                    </Header>
+                    <Nav renderIcon={collapsed => collapsed ? <ChevronRight /> : <ChevronLeft />}>
+                        <SideNavigation />
+                    </Nav>
+                    <Content>
+                        <main>
+                            <Routes />
+                        </main>
+                    </Content>
+                    <Footer>
+                        <Typography align="center">
+                            &copy; {new Date().getFullYear()}
+                        </Typography>
+                    </Footer>
+                </Root>
+            </ThemeProvider>
+        );
+    }
 }
 
 export default App;
